@@ -1,0 +1,54 @@
+.main-content {
+    text-align: center;
+  }
+  
+  .hero img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+  }
+  
+  .dishes {
+    margin-top: 3rem;
+    padding: 0 2rem;
+  }
+  
+  .dish-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .dish {
+    max-width: 300px;
+  }
+  
+  .dish img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .dish p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #555;
+  }
+
+  @media (max-width: 768px) { 
+
+    .dish img, .dish p {
+      margin-left: 20%;
+    }
+
+  }
+
+  @media (max-width: 768px) { 
+
+    .dish img, .dish p {
+      width: 85vw;
+      margin-left: auto;
+    }
+
+  }
+  

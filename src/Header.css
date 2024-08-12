@@ -1,0 +1,79 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.5em;
+}
+
+.menu-btn {
+  display: none; /* Hidden by default on larger screens */
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Default nav styles (visible on large screens) */
+.nav {
+  display: flex;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  margin: 0 15px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block; /* Show menu button on small screens */
+  }
+
+  .nav {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    width: 100%;
+    background: #333;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    z-index: 1000;
+    max-height: 0; /* Start with collapsed height */
+    overflow: hidden; /* Hide overflow */
+    transition: max-height 0.3s ease; /* Smooth transition */
+  }
+
+  .nav.open {
+    display: flex; /* Show nav when open */
+    max-height: 500px; /* Expand to fit content */
+  }
+
+  .nav ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav li {
+    margin: 10px 0;
+  }
+}
+
